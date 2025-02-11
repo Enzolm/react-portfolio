@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cv from "./routes/Cv.tsx";
 import CatalogPage from "./routes/Projet.tsx";
 import RameDiff from "./routes/projets/RameDiff.tsx";
+import NotFound from "./routes/404.tsx"
+import NavDockBar from "./Composant/NavBar/Dock.tsx"
+import Blog from "./routes/Blog.tsx"
+
 
 import "./index.css";
 import App from "./routes/Home.tsx";
@@ -28,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/projet/crud",
     element: <RameDiff />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 

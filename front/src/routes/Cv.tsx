@@ -1,13 +1,14 @@
-import NavBar from "@/Composant/NavBar/NavBar";
+import NavDockBar from "../Composant/NavBar/Dock"
 import PdfCv from "../assets/cv_enzo.jpg";
+import RssFeed from "../Composant/RSS/RssFeed"
 
 export default function Cv() {
   return (
     <>
       <div className="sticky">
-        <NavBar />
-      </div>
       <img src={PdfCv} alt="CV" />
+      </div>
+      <NavDockBar/>
     </>
   );
 }

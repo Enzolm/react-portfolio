@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import IconRameDiff from "../assets/ramediff/home.png";
 import IconRameDiff2 from "../assets/crud/home.png";
+import NavDockBar from "../Composant/NavBar/Dock"
+
 
 export default function CatalogPage() {
   return (
@@ -21,6 +23,7 @@ export default function CatalogPage() {
           </Link>
         </div>
       </ul>
+      <NavDockBar/>
     </div>
   );
 }
