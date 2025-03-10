@@ -2,28 +2,67 @@ import React from "react";
 import { Link } from "react-router-dom";
 import IconRameDiff from "../assets/ramediff/home.png";
 import IconRameDiff2 from "../assets/crud/home.png";
-import NavDockBar from "../Composant/NavBar/Dock"
-
+import NavDockBar from "../Composant/NavBar/Dock";
+import { useNavigate } from "react-router";
 
 export default function CatalogPage() {
+  const navigate = useNavigate();
   return (
-    <div className="flex justify-center">
-      <h1>Catalogue</h1>
-      <ul>
-        <div className=" bg-slate-800 w-72 rounded-2xlh-96">
-          <img src={IconRameDiff} className="h-44  p-4" alt="Logo" />
-          <Link to="/projet/ramediff" className="btn btn-ghost text-xl">
-            Rame Différée
-          </Link>
+    <div className="overflow-hidden">
+      <div className="flex justify-center">
+        <h1>Projet d'entreprise</h1>
+      </div>
+      <div className="flex justify-center gap-4">
+        <div className="card bg-base-100 w-96 shadow-sm">
+          <figure>
+            <img src={IconRameDiff2} alt="CrudProject" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">CRUD</h2>
+            <p>Site web réalisé sur PowerApps</p>
+            <div className="card-actions justify-end">
+              <button onClick={() => navigate("crud")} className="btn btn-primary">
+                Details
+              </button>
+            </div>
+          </div>
         </div>
-        <div className=" bg-slate-800 w-72 rounded-2xlh-96">
-          <img src={IconRameDiff2} className="h-44  p-4" alt="Logo" />
-          <Link to="/projet/crud" className="btn btn-ghost text-xl">
-            CRUD
-          </Link>
+      </div>
+
+      <div className=" mt-6 flex justify-center">
+        <h1>Projet de cours</h1>
+      </div>
+      <div className="flex justify-center gap-4">
+        <div className="card bg-base-100 w-96 shadow-sm">
+          <figure>
+            <img src={IconRameDiff} alt="RameDiffProject" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Rame Différée</h2>
+            <p>Site web réalisé sur PowerApps</p>
+            <div className="card-actions justify-end">
+              <button onClick={() => navigate("ramediff")} className="btn btn-primary">
+                Details
+              </button>
+            </div>
+          </div>
         </div>
-      </ul>
-      <NavDockBar/>
+        <div className="card bg-base-100 w-96 shadow-sm">
+          <figure>
+            <img src={IconRameDiff2} alt="CrudProject" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Rame Différée</h2>
+            <p>Site web réalisé sur PowerApps</p>
+            <div className="card-actions justify-end">
+              <button onClick={() => navigate("crud")} className="btn btn-primary">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <NavDockBar />
     </div>
   );
 }

@@ -5,7 +5,17 @@ import IMG_fichem from "../../assets/ramediff/ficheMPDF_page-0001.jpg";
 import IMG_form from "../../assets/ramediff/forms.png";
 import IMG_habilitation from "../../assets/ramediff/habilitation.png";
 import IMG_fichep from "../../assets/ramediff/inforapide.png";
-import NavBar from "@/Composant/NavBar/NavBar";
+import IMG_new_home from "../../assets/ramediff/new-home.png";
+import IMG_new_compteur from "../../assets/ramediff/new_compteur.png";
+import IMG_new_fichem from "../../assets/ramediff/new_ficheM.png";
+import IMG_new_form from "../../assets/ramediff/new_form.png";
+import IMG_new_class from "../../assets/ramediff/new_dossier_classé.png";
+import IMG_new_popup from "../../assets/ramediff/new_popup_home.png";
+import NavDockBar from "../../Composant/NavBar/Dock";
+import PowerAppsLogo from "../../assets/icon/powerapps.png";
+import SharePointLogo from "../../assets/icon/sharepoint.png";
+import PowerAutomateLogo from "../../assets/icon/Microsoft_Power_Automate.png";
+import FormsLogo from "../../assets/icon/Forms-Logo.png";
 
 export default function RameDiff() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -20,87 +30,50 @@ export default function RameDiff() {
 
   return (
     <>
-      <NavBar />
-      <div className="mt-6 container mx-auto p-6 bg-base-100 shadow-lg rounded-xl">
-        <h1 className="text-4xl font-bold text-white mb-6 text-center">
-          Rame Différée
-        </h1>
-
-        <div className="rounded-2xl bg-neutral-content p-8 shadow-lg">
-          <div className="flex justify-center">
-            <img
-              src={IMG_home}
-              className="h-44 rounded-lg shadow-lg"
-              alt="Logo"
-            />
+      <NavDockBar />
+      <div className="w-[80%] h-[80%] mx-auto mt-6 bg-slate-500 p-6 rounded-xl shadow-lg">
+        <h1 className="text-xl font-bold mb-5">Rame différée</h1>
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="card bg-base-300 rounded-box grid h-32 grow place-items-center p-4">
+            <span className="text-xl font-bold">Objectif</span>Cet outil a pour but principal de centraliser les échanges interservices et d'obtenir un meilleur suivi entre l'équipe d'intervention et la POP (Pôle Opérations & Production) afin d'assurer une meilleure organisation des rames différées, et donc une meilleure réactivité et rapidité d'intervention.{" "}
           </div>
-          <p className="mt-6 text-lg text-neutral-700 leading-relaxed">
-            La rame différée est un projet qui consiste à créer une application
-            web permettant de voir les dossiers Rame Différée en cours.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-8 text-secondary">
-            Objectif :
-          </h2>
-          <p className="text-neutral-600 mt-2">
-            - Digitaliser un processus manuel <br />
-            - Améliorer la traçabilité <br />
-            - Faciliter la collaboration entre équipes <br />
-            - Automatiser des tâches répétitives <br />
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-8 text-secondary">
-            Outils :
-          </h2>
-          <p className="text-neutral-600 mt-2">
-            - Power Apps <br />
-            - SharePoint <br />
-            - Power Automate <br />- Forms
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-8 text-secondary">
-            Images :
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
-            {[
-              IMG_compteur,
-              IMG_fichem,
-              IMG_form,
-              IMG_habilitation,
-              IMG_fichep,
-            ].map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer"
-                alt={`Image ${index + 1}`}
-                onClick={() => handleImageClick(image)}
-              />
-            ))}
+          <div className="divider lg:divider-horizontal"></div>
+          <div className="card bg-base-300 rounded-box grid h-32 grow place-items-center p-4">
+            <span className=" text-xl font-bold">Fonctionnalités</span>L'application permet de consulter les dossiers rame différée en cours, de les éditer, de les valider, de les refuser, de les archiver et de les supprimer.{" "}
           </div>
         </div>
 
-        {/* Modal pour afficher l'image en grand */}
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-            onClick={closeModal}
-          >
-            <div className="relative">
-              <button
-                className="absolute top-4 right-4 bg-white rounded-full shadow-lg p-2 text-black"
-                onClick={closeModal}
-              >
-                ✕
-              </button>
-              <img
-                src={selectedImage}
-                className="max-w-full max-h-screen rounded-lg"
-                alt="Agrandie"
-              />
-            </div>
+        <div className=" mt-3 stats bg-base-100 border border-base-300">
+          <div className="stat">
+            <div className="stat-title">Front</div>
+            <img className="h-16" src={PowerAppsLogo} alt="Powerapps logo" />
           </div>
-        )}
+
+          <div className="stat">
+            <div className="stat-title">Donnée</div>
+            <img className="h-16" src={SharePointLogo} alt="Sharepoint logo" />
+          </div>
+          <div className="stat">
+            <div className="stat-title">Formulaire</div>
+            <img className="h-16" src={FormsLogo} alt="Forms logo" />
+          </div>
+          <div className="stat">
+            <div className="stat-title">Power Automate</div>
+            <img className="h-16" src={PowerAutomateLogo} alt="Forms logo" />
+          </div>
+        </div>
+        <h1 className="text-xl font-bold mb-5 mt-5">Image :</h1>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
+          {[IMG_compteur, IMG_fichem, IMG_form, IMG_habilitation, IMG_fichep, IMG_home].map((image, index) => (
+            <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
+          ))}
+        </div>
+        <h1 className="text-xl font-bold mb-5 mt-5">V2 :</h1>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
+          {[IMG_new_home, IMG_new_popup, IMG_new_class, IMG_new_compteur, IMG_new_fichem].map((image, index) => (
+            <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
+          ))}
+        </div>
       </div>
     </>
   );
