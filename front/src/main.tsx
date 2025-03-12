@@ -11,6 +11,7 @@ import Blog from "./routes/Blog.tsx";
 import "./index.css";
 import App from "./routes/Home.tsx";
 import Crud from "./routes/projets/Crud.tsx";
+import Project_EIA from "./routes/projets/EIA_Project.tsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/projet/crud",
     element: <Crud />,
+  },
+  {
+    path: "/projet/eia",
+    element: <Project_EIA />,
   },
   {
     path: "/blog",

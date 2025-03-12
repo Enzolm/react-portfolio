@@ -29,16 +29,15 @@ export default function RameDiff() {
   };
 
   return (
-    <>
-      <NavDockBar />
-      <div className="w-[80%] h-[80%] mx-auto mt-6 bg-slate-500 p-6 rounded-xl shadow-lg">
+    <div className="overflow-hidden w-screen h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
+      <div className="w-[80%] mx-auto mt-6 bg-slate-500 p-6 rounded-xl shadow-lg">
         <h1 className="text-xl font-bold mb-5">Rame différée</h1>
         <div className="flex w-full flex-col lg:flex-row">
-          <div className="card bg-base-300 rounded-box grid h-32 grow place-items-center p-4">
+          <div className="card bg-base-300 rounded-box grid grow place-items-center p-4">
             <span className="text-xl font-bold">Objectif</span>Cet outil a pour but principal de centraliser les échanges interservices et d'obtenir un meilleur suivi entre l'équipe d'intervention et la POP (Pôle Opérations & Production) afin d'assurer une meilleure organisation des rames différées, et donc une meilleure réactivité et rapidité d'intervention.{" "}
           </div>
           <div className="divider lg:divider-horizontal"></div>
-          <div className="card bg-base-300 rounded-box grid h-32 grow place-items-center p-4">
+          <div className="card bg-base-300 rounded-box grid grow place-items-center p-4">
             <span className=" text-xl font-bold">Fonctionnalités</span>L'application permet de consulter les dossiers rame différée en cours, de les éditer, de les valider, de les refuser, de les archiver et de les supprimer.{" "}
           </div>
         </div>
@@ -68,6 +67,24 @@ export default function RameDiff() {
             <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
           ))}
         </div>
+        <div className="stats stats-vertical shadow mt-4">
+          <div className="stat">
+            <div className="stat-desc">1. Gérer le patrimoine informatique</div>
+            <div className="stat-title">- Recenser et identifier les ressources numériques</div>
+            <div className="stat-title">- Mettre en place et vérifier les niveaux d’habilitation associés à un service</div>
+            <div className="stat-title">- Vérifier le respect des règles d’utilisation des ressources numériques</div>
+          </div>
+
+          <div className="stat">
+            <div className="stat-desc">2. Répondre aux incidents et aux demandes d’assistance et d’évolution</div>
+            <div className="stat-title">- Traiter des demandes concernant les applications</div>
+          </div>
+
+          <div className="stat">
+            <div className="stat-desc">5. Mettre à disposition des utilisateurs un service informatique</div>
+            <div className="stat-title">- Réaliser les tests d’intégration et d’acceptation d’un service</div>
+          </div>
+        </div>
         <h1 className="text-xl font-bold mb-5 mt-5">V2 :</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
           {[IMG_new_home, IMG_new_popup, IMG_new_class, IMG_new_compteur, IMG_new_fichem].map((image, index) => (
@@ -75,6 +92,17 @@ export default function RameDiff() {
           ))}
         </div>
       </div>
-    </>
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" onClick={closeModal}>
+          <div className="relative">
+            <button className="absolute top-4 right-4 bg-white rounded-full shadow-lg p-2 text-black" onClick={closeModal}>
+              ✕
+            </button>
+            <img src={selectedImage} className="max-w-full max-h-screen rounded-lg" alt="Agrandie" />
+          </div>
+        </div>
+      )}
+      <NavDockBar />
+    </div>
   );
 }
