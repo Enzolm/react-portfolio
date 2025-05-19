@@ -7,6 +7,7 @@ import IMG_crud_delete from "@/assets/crud/delete.png";
 import IMG_crud_api from "@/assets/crud/apicode.png";
 import IMG_sql from "@/assets/crud/sql.png";
 import IMG_API from "@/assets/icon/nodejs.svg";
+import GithubIMG from "@/assets/crud/github.png"
 import IMG_react from "@/assets/icon/React-icon.svg.png";
 import IMG_SQL from "@/assets/icon/mysql.png";
 
@@ -64,7 +65,7 @@ export default function Crud() {
         </div>
         <h1 className="text-xl font-bold mb-5 mt-5">Image :</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
-          {[IMG_crud_create, IMG_crud_edit, IMG_crud_delete, IMG_crud_api, IMG_sql].map((image, index) => (
+          {[IMG_crud_create, IMG_crud_edit, IMG_crud_delete, IMG_crud_api, IMG_sql, GithubIMG].map((image, index) => (
             <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
           ))}
         </div>

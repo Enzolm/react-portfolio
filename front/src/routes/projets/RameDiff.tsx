@@ -88,6 +88,7 @@ export default function RameDiff() {
           <div className="stat">
             <div className="stat-desc">5. Mettre à disposition des utilisateurs un service informatique</div>
             <div className="stat-title">- Réaliser les tests d’intégration et d’acceptation d’un service</div>
+            <div className="stat-title">- Accompagner les utilisateurs dans la mise en place d’un service</div>
           </div>
         </div>
         <h1 className="text-xl font-bold mb-5 mt-5">V2 :</h1>

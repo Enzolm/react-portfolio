@@ -8,6 +8,8 @@ import IMG_2 from "../../assets/eia/Organigramme EIA_page-0001.jpg";
 import IMG_3 from "../../assets/eia/bon_de_commande.png";
 import IMG_4 from "../../assets/eia/eia-logo.png";
 import NavDockBar from "../../Composant/NavBar/Dock";
+import GithubIMG from "@/assets/eia/github.png"
+import TrelloIMG from "@/assets/eia/trello.png"
 
 export default function Project_EIA() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -34,14 +36,14 @@ export default function Project_EIA() {
 
         <h1 className="text-xl font-bold mb-5 mt-5">Image :</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
-          {[offre_1, offre_2, IMG_1, IMG_2, IMG_3, IMG_4, devis_1, devis_2].map((image, index) => (
+          {[offre_1, offre_2, IMG_1, IMG_2, IMG_3, IMG_4, devis_1, devis_2, GithubIMG, TrelloIMG].map((image, index) => (
             <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
           ))}
         </div>
         <div className="stats stats-vertical shadow mt-4">
           <div className="stat">
             <div className="stat-desc">1. Gérer le patrimoine informatique</div>
-            <div className="stat-title">- Recenser et identifier les ressources numériques</div>
+            <div className="stat-title">- Gérer les sauvegardes</div>
           </div>
 
           <div className="stat">

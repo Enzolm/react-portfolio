@@ -65,19 +65,19 @@ export default function Ordonnancement() {
         <div className="stats stats-vertical shadow mt-4">
           <div className="stat">
             <div className="stat-desc">1. Gérer le patrimoine informatique</div>
-            <div className="stat-title">- Recenser et identifier les ressources numériques</div>
-            <div className="stat-title">- Mettre en place et vérifier les niveaux d’habilitation associés à un service</div>
-            <div className="stat-title">- Vérifier le respect des règles d’utilisation des ressources numériques</div>
+            <div className="stat-title">- Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</div>
+            <div className="stat-title">- Gérer les sauvegardes</div>
           </div>
 
           <div className="stat">
-            <div className="stat-desc">2. Répondre aux incidents et aux demandes d’assistance et d’évolution</div>
-            <div className="stat-title">- Traiter des demandes concernant les applications</div>
+            <div className="stat-desc">4. Travailler en mode projet</div>
+            <div className="stat-title">- Planifier les activités</div>
           </div>
 
           <div className="stat">
             <div className="stat-desc">5. Mettre à disposition des utilisateurs un service informatique</div>
             <div className="stat-title">- Réaliser les tests d’intégration et d’acceptation d’un service</div>
+            <div className="stat-title">- Accompagner les utilisateurs dans la mise en place d’un service</div>
           </div>
         </div>
       </div>

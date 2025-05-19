@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import IconRameDiff from "../assets/ramediff/home.png";
+import IconOrdo from "@/assets/ordonnancement/Capture d'écran 2025-04-28 080902.png"
 import IconRameDiff2 from "../assets/crud/home.png";
 import IconEia from "../../src/assets/eia/eia-logo.png";
 import NavDockBar from "../Composant/NavBar/Dock";
@@ -30,7 +31,7 @@ export default function CatalogPage() {
         </div>
         <div className="card bg-base-100 w-96 shadow-sm">
           <figure>
-            <img src={IconRameDiff} alt="CrudProject" />
+            <img src={IconOrdo} alt="CrudProject" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Ordonnancement</h2>
