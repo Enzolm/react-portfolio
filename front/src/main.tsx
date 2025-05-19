@@ -6,6 +6,7 @@ import CatalogPage from "./routes/Projet.tsx";
 import RameDiff from "./routes/projets/RameDiff.tsx";
 import NotFound from "./routes/404.tsx";
 import NavDockBar from "./Composant/NavBar/Dock.tsx";
+import Ordonnancement from "@/routes/projets/ordonancement.tsx";
 import Blog from "./routes/Blog.tsx";
 
 import "./index.css";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/projet/eia",
     element: <Project_EIA />,
+  },
+    {
+    path: "/projet/ordo",
+    element: <Ordonnancement />,
   },
   {
     path: "/blog",

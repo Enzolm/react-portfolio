@@ -16,6 +16,11 @@ import PowerAppsLogo from "../../assets/icon/powerapps.png";
 import SharePointLogo from "../../assets/icon/sharepoint.png";
 import PowerAutomateLogo from "../../assets/icon/Microsoft_Power_Automate.png";
 import FormsLogo from "../../assets/icon/Forms-Logo.png";
+import mail_docs from "@/assets/ramediff/mail_docs.png";
+import mail_test from "@/assets/ramediff/rame_diff_mail_test.png";
+import pdf_formulaire from "@/assets/ramediff/Dossier rame différée_p1_page-0001.jpg";
+import pdf_formulaire2 from "@/assets/ramediff/Dossier rame différée_p2_page-0001.jpg";
+import reponse_fomrs from "@/assets/ramediff/image.png";
 
 export default function RameDiff() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -63,7 +68,7 @@ export default function RameDiff() {
         </div>
         <h1 className="text-xl font-bold mb-5 mt-5">Image :</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
-          {[IMG_compteur, IMG_fichem, IMG_form, IMG_habilitation, IMG_fichep, IMG_home].map((image, index) => (
+          {[IMG_compteur, IMG_fichem, IMG_form, IMG_habilitation, IMG_fichep, IMG_home, mail_docs,pdf_formulaire,pdf_formulaire2, reponse_fomrs, mail_test].map((image, index) => (
             <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
           ))}
         </div>
