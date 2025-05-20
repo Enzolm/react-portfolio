@@ -1,5 +1,3 @@
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
-import Aurora from "../components/ui/Aurora";
 import { useNavigate } from "react-router";
 import NavDockBar from "../Composant/NavBar/Dock";
 import { Button } from "@/components/ui/button";

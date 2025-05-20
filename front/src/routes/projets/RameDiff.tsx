@@ -8,7 +8,6 @@ import IMG_fichep from "../../assets/ramediff/inforapide.png";
 import IMG_new_home from "../../assets/ramediff/new-home.png";
 import IMG_new_compteur from "../../assets/ramediff/new_compteur.png";
 import IMG_new_fichem from "../../assets/ramediff/new_ficheM.png";
-import IMG_new_form from "../../assets/ramediff/new_form.png";
 import IMG_new_class from "../../assets/ramediff/new_dossier_classé.png";
 import IMG_new_popup from "../../assets/ramediff/new_popup_home.png";
 import NavDockBar from "../../Composant/NavBar/Dock";

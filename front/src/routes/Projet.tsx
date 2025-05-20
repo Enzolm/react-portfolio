@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import IconRameDiff from "../assets/ramediff/home.png";
 import IconOrdo from "@/assets/ordonnancement/Capture d'écran 2025-04-28 080902.png"
 import IconRameDiff2 from "../assets/crud/home.png";

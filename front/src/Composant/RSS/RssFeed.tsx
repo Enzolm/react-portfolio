@@ -3,7 +3,6 @@ import SpotlightCard from '../../components/reactbits/SpotlightCard';
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { FaLink } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -25,7 +24,6 @@ interface RssFeedData {
 }
 
 const RssFeed: React.FC = () => {
-    const navigate = useNavigate();
   const [feed, setFeed] = useState<RssFeedData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 

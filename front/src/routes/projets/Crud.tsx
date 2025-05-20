@@ -1,6 +1,5 @@
 import { useState } from "react";
 import NavDockBar from "../../Composant/NavBar/Dock";
-import IMG_crud_home from "@/assets/crud/home.png";
 import IMG_crud_create from "@/assets/crud/add.png";
 import IMG_crud_edit from "@/assets/crud/edit.png";
 import IMG_crud_delete from "@/assets/crud/delete.png";
