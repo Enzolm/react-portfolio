@@ -14,6 +14,7 @@ import img_11 from "@/assets/ordonnancement/20250327_1245100.webp";
 import IMG_react from "@/assets/icon/React-icon.svg.png";
 import IMG_API from "@/assets/icon/nodejs.svg";
 import IMG_sql from "@/assets/icon/png-transparent-postgresql-plain-wordmark-logo-icon.png";
+import ancien_lpanning from "@/assets/ordonnancement/ancien_planning.png";
 
 
 export default function Ordonnancement() {
@@ -58,7 +59,7 @@ export default function Ordonnancement() {
         </div>
         <h1 className="text-xl font-bold mb-5 mt-5">Image :</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
-          {[img_1, img_2,img_5,img_6,img_7,img_8,img_9,img_10,img_11].map((image, index) => (
+          {[img_1, img_2,img_5,img_6,img_7,img_8,img_9,img_10,img_11, ancien_lpanning].map((image, index) => (
             <img key={index} src={image} className="h-44 rounded-lg shadow-md hover:shadow-xl cursor-pointer" alt={`Image ${index + 1}`} onClick={() => handleImageClick(image)} />
           ))}
         </div>
